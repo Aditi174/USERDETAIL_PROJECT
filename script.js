@@ -18,8 +18,12 @@ async function alldata() {
     image.addEventListener('click', () => {
         if (isEnlarged) {
             image.src = userResult.picture.medium;
+            image.style.width = "200px"; 
+        image.style.height = "200px";
         } else {
             image.src = userResult.picture.large;
+            image.style.width = "400px"; 
+            image.style.height = "400px"
         }
         isEnlarged = !isEnlarged;
     });
