@@ -9,11 +9,12 @@ async function alldata() {
     const userResult = data.results[0];
 
     const image = document.createElement("img");
-    image.classList.add("pic")
+    image.classList.add("pic");
     image.src = userResult.picture.medium;
 
     let isEnlarged = false;
 
+    
     image.addEventListener('click', () => {
         if (isEnlarged) {
             image.src = userResult.picture.medium;
@@ -22,6 +23,9 @@ async function alldata() {
         }
         isEnlarged = !isEnlarged;
     });
+
+    
+
 
     const userGender = document.createElement("gender");
     userGender.classList.add("f_m");
